@@ -1,0 +1,299 @@
+@font-face {
+    font-family: "KGSecondChancesSolid";
+    src: url("KGSecondChancesSolid.ttf");
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "KGSecondChancesSolid";
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  /* Background */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("background.png");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #f8f3e0;
+    position: relative;
+    height: 80px;
+    margin-bottom: 50px;
+  }
+  
+  .logo {
+    position: absolute;
+    left: 2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    color: #603813;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #9b5e25;
+  }
+  
+  .hamburger {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    font-size: 1.8rem;
+    color: #603813;
+    cursor: pointer;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    width: 100vw;
+    height: 100vh;
+    background: #e8045d;
+    padding-top: 4rem;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .sidebar.open {
+    right: 0;
+  }
+  
+  .sidebar .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0 2rem;
+  }
+  
+  .sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 2.5rem 0;
+    font-size: 1.6rem;
+  }
+  
+  /* Overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    z-index: 999;
+  }
+  
+  .overlay.show {
+    display: block;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #f8f3e0;
+    padding: 2rem 1rem 1rem;
+    margin-top: 4rem;
+    color: #603813;
+    font-family: "KGSecondChancesSolid";
+  }
+  
+  .footer-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .footer-logo img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .social-link {
+    font-size: 2rem;
+    color: #603813;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .social-link:hover {
+    color: #9b5e25;
+    transform: scale(1.1);
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .footer-links a {
+    color: #603813;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #9b5e25;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  /* Responsive Footer */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-links {
+      justify-content: center;
+    }
+  }
+  
+  /* Mobile Nav */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .logo img {
+      height: 65px;
+    }
+  }
+  
+
+  
+
+  .resume-section {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    text-align: center;
+  }
+  
+  .resume-image-container {
+    border: 4px solid #603813;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+  }
+  
+  .resume-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+  }
+  
+  .resume-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #603813;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .resume-btn:hover {
+    background-color: #9b5e25;
+    cursor: pointer;
+  }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .resume-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .resume-btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  

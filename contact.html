@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Suvanee Galicia</title>
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="asdf.png" alt="Logo" />
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="protfilio.html">Protfilio</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">☰</div>
+  </nav>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="close-btn" id="close-btn">✕</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="protfilio.html">Protfilio</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Contact Section -->
+  <main class="contact-section">
+    <h1 class="portfolio-title">Get in Touch</h1>
+    <div class="contact-content">
+        <form action="https://formspree.io/f/movepwno" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+      <div class="contact-details">
+        <p><strong>Email:</strong> suvanee.galicia@gmail.com</p>
+        <p><strong>Location:</strong> Based in California</p>
+        <p><strong>Let's connect:</strong></p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/_suvanee" target="_blank" aria-label="Instagram" class="social-link">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/suvanee-galicia" target="_blank" aria-label="LinkedIn" class="social-link">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="asdf.png" alt="Logo" />
+      </div>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/_suvanee" target="_blank" aria-label="Instagram" class="social-link">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn" class="social-link">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+      <div class="footer-links">
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Suvanee Galicia. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
